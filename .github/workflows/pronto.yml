@@ -16,6 +16,6 @@ jobs:
       with:
         target: ${{ steps.get_base.outputs.sha }}
         runners: >-
-          rubocop bundler_audit rails_schema brakeman
+          rubocop bundler_audit rails_schema brakeman reek
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
