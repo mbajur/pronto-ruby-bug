@@ -12,7 +12,7 @@ jobs:
       run: echo ::set-output name=sha::`git merge-base HEAD origin/dev || git merge-base HEAD origin/master`
 
     - name: Run Pronto
-      uses: adwerx/pronto-ruby@v1.1.0
+      uses: adwerx/pronto-ruby@v2.1.1
       with:
         target: ${{ steps.get_base.outputs.sha }}
         runners: >-
