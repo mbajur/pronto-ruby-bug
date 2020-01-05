@@ -12,10 +12,10 @@ jobs:
       run: echo ::set-output name=sha::`git merge-base HEAD origin/dev || git merge-base HEAD origin/master`
 
     - name: Run Pronto
-      uses: adwerx/pronto-ruby@v2.1.1
+      uses: adwerx/pronto-ruby@v2.3.1
       with:
         target: ${{ steps.get_base.outputs.sha }}
         runners: >-
-          rubocop bundler_audit rails_schema brakeman
+          rubocop bundler_audit rails_schema brakeman reek
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
