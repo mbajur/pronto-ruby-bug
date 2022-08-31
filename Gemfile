@@ -4,4 +4,4 @@ source "https://rubygems.org"
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
-gem 'omniauth', '1.9.0'
+gem 'omniauth', '1.9.2'
